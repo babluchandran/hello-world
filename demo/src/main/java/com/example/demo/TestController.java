@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class TestController {
-	@Value("${emp.name}")
+	@Value("${emp_name}")
 	private String firstName;
 	
 		
