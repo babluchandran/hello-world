@@ -16,7 +16,7 @@ pipeline {
 		stage('Maven Build') {
             steps {
                 script {
-                    sh "cd demo && mvn clean install"
+                    sh "cd demo && mvn clean install -DskipTests"
                     step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
 				}
             }
