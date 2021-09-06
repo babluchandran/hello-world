@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     sh "cd demo && mvn clean install -DskipTests"
-                    step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
+                    
 				}
             }
         }
@@ -26,7 +26,7 @@ pipeline {
 		stage('Last Build Status') {
             steps {
                 script {
-                    //step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])  
+                      
 			sh "jenkins build success"
 				}
             }
