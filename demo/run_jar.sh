@@ -1,2 +1,2 @@
 #!/bin/bash
-nohup java -jar target/*.jar &
+java -jar target/*.jar
