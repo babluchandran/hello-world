@@ -17,6 +17,14 @@ pipeline {
 			sh " cd demo && mvn clean install"
 		}
 	    }
+	
+	stage('Docker Build Image') {
+            steps {
+                script {
+                    app = docker.build("techmid/mong")                            
+				}
+            }
+        }
 	   
     }	
 }            
