@@ -25,6 +25,16 @@ pipeline {
 				}
             }
         }
+	    
+	stage('Docker Push Image') {
+            steps {
+                script {
+                    docker.withRegistry('https://registry.hub.docker.com','dockerID') {
+                    app.push("${env.BUILD_NUMBER}")                            
+				    }
+                }
+            }
+        }
 	   
     }	
 }            
