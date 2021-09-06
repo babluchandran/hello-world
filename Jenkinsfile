@@ -4,9 +4,7 @@ pipeline {
     agent {label "master"}
     options { buildDiscarder(logRotator(numToKeepStr: '10')) }
 	
-	    tools {
-            maven "M3"
-        }
+
 	
     stages {
         stage('Checkout SCM') {
