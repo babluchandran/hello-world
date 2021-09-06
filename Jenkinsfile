@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 //changes to master again
 pipeline {
-    agent {label "master"}
+    agent any
     options { buildDiscarder(logRotator(numToKeepStr: '10')) }
     stages {
         stage('Checkout SCM') {
