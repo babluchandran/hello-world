@@ -23,7 +23,7 @@ pipeline {
         }
 	    
 	           
-		stage('Unit Test') {
+		stage('Last Build Status') {
             steps {
                 script {
                     //step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])  
