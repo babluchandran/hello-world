@@ -14,7 +14,7 @@ pipeline {
 	    
 	stage('Test'){
 		steps{
-			sh "mvn clean install"
+			sh " cd demo && mvn clean install"
 		}
 	    }
 	   
