@@ -12,21 +12,5 @@ pipeline {
             }
         }
 	   
-		
-		stage('Maven Build') {
-            steps {
-
-                    sh "cd demo && mvn clean install -DskipTests"
-                    
-            }
-        }
-	    
-	           
-		stage('Last Build Status') {
-            steps {
-                      
-			sh "jenkins build success"
-            }
-        }
     }	
 }            
