@@ -25,7 +25,8 @@ pipeline {
 	stage('Docker Build Image') {
             steps {
                 script {
-                    app = docker.build("techmid/mong")                            
+                    //app = docker.build("techmid/mong")                            
+			dockerBuild 'myimage'
 				}
             }
         }
