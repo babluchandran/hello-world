@@ -1,5 +1,6 @@
 #!/usr/bin/env groovy
 //changes to master again
+@Library('my_library')_
 pipeline {
     agent any
     options { buildDiscarder(logRotator(numToKeepStr: '10')) }
@@ -14,8 +15,11 @@ pipeline {
 	    
 	stage('Maven Build'){
 		steps{
-			sh " cd demo && mvn clean install"
+			dir('demo'){
+				mavenBuild 'mvn clean install'
+			}
 		}
+			
 	    }
 	
 	stage('Docker Build Image') {
