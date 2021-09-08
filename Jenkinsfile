@@ -36,7 +36,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com','my_docker') {
                     //app.push("${env.BUILD_NUMBER}")                            
-			dockerPush 'myimage'
+			//dockerPush 'myimage'
 				    }
                 }
             }
