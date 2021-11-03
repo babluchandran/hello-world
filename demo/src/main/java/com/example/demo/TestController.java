@@ -16,7 +16,7 @@ public class TestController {
 		
     @RequestMapping(value ="/api/**",method = RequestMethod.GET, produces = {MediaType.APPLICATION_JSON_VALUE})
     public Widget index() {
-        return new Widget(${emp_name}, 10, 7);
+        return new Widget("Bablu", 10, 7);
     }
     
     
