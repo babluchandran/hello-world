@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:11
 VOLUME /tmp   
 EXPOSE 8082
 ADD $WORKSPACE/demo/target/*.jar app.jar
