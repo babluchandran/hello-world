@@ -7,6 +7,7 @@ def project = "JAVA"
 //def dockerize = "True"
 
 if (project=="JAVA"){
+println("The Specifid project is "+ project)
 e2eMvnProject([repoUrl: "https://github.com/babluchandran/hello-world.git", name: "Bablu"])
 }
 else{
