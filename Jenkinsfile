@@ -5,7 +5,7 @@
 
 def gitUrl = "https://github.com/babluchandran/hello-world.git"
 def project = "JAVA"
-def dockerize = "False"
+def dockerize = "True"
 
 if (project=="JAVA"){
 println("The Specifid project is "+ project)
